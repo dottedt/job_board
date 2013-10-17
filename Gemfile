@@ -38,13 +38,13 @@ group :development, :test do
   # Automatically run tests when files are changed
   gem 'guard-rspec', '4.0.1'
   # Speeding up the tests. Pre-loads the environment so it's not done ever time.
-  gem 'spork', '0.9.2'
+  gem 'spork-rails', '4.0.0'
 end
 
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  # gem 'capybara', '2.1.0'
+  gem 'capybara', '2.1.0'
 end
 
 
