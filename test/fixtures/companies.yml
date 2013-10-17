@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  show_address: false
+  url: MyString
+  show_as_customer: false
+
+two:
+  name: MyString
+  address: MyString
+  show_address: false
+  url: MyString
+  show_as_customer: false
