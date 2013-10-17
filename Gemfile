@@ -37,8 +37,10 @@ group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # Automatically run tests when files are changed
   gem 'guard-rspec', '4.0.1'
-  # Speeding up the tests. Pre-loads the environment so it's not done ever time.
-  gem 'spork-rails', '4.0.0'
+  gem 'rb-readline'
+  # To over come a known issue in guard-spork we're pointing to the github branch.
+  gem 'guard-spork', :github => 'guard/guard-spork'
+  gem 'spork', '1.0.0rc4'
 end
 
 
