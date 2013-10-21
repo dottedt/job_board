@@ -43,6 +43,9 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
     config.include Capybara::DSL
+    #Defer Gargage Collection for faster tests
+    config.before(:all) { DeferredGarbageCollection.start }
+    config.after(:all) { DeferredGarbageCollection.reconsider }
   end
 end
 
