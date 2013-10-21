@@ -37,7 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # Automatically run tests when files are changed
   gem 'guard-rspec', '4.0.1'
-  gem 'rb-readline'
+  gem 'rb-readline', '~> 0.4.2'
   # To over come a known issue in guard-spork we're pointing to the github branch.
   gem 'guard-spork', :github => 'guard/guard-spork'
   gem 'spork', '1.0.0rc4'
