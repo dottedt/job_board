@@ -1,23 +1,19 @@
 require "spec_helper"
 
 describe Company do
-   before do
-     @company = Company.new(name: "Test Company 1", address: "1234 N. North, Chicago Il 60642", show_address:"t", url:"http://www.fakeurl.com", show_as_customer:"f")
-   end
+  before do
+    @company = Company.new(name: "Test Company 1", address: "1234 N. North, Chicago Il 60642", show_address: true, url:'http://www.fakeurl.com', show_as_customer:false)
+  end
 
-   subject {@company}
+  subject {@company}
 
-   it { should respond_to(:name)}
-   it { should respond_to(:address)}
-   it { should respond_to(:show_address)}
-   it { should respond_to(:url)}
-   it { should respond_to(:show_as_customer)}
+  it { should respond_to(:name, :address, :url, :show_address, :show_as_customer)}
 
-   describe "when name is not present" do
+  describe "when name is not present" do
     before { @company.name = " " }
     it { should_not be_valid }
   end
-   describe "when address is not present" do
+  describe "when address is not present" do
     before {@company.address = " "}
     it {should_not be_valid}
   end

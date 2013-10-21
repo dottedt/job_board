@@ -41,6 +41,7 @@ group :development, :test do
   # To over come a known issue in guard-spork we're pointing to the github branch.
   gem 'guard-spork', :github => 'guard/guard-spork'
   gem 'spork', '1.0.0rc4'
+  gem 'shoulda', '3.5.0'
 end
 
 
