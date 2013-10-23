@@ -25,6 +25,10 @@ describe Company do
     before {@company.url = " " }
     it {should_not be_valid}
   end
+  describe 'when url does not exist' do
+    before {@company.url = "http://www.fakeurlthatwontwork.com"}
+    it {should_not be_valid}
+  end
   describe "when show_as_customer is not present" do
     before {@company.show_as_customer = " "}
     it {should_not be_valid}
