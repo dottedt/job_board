@@ -42,7 +42,7 @@ group :development, :test do
   gem 'guard-rspec', '4.0.1'
   gem 'rb-readline', '~> 0.4.2'
   # To over come a known issue in guard-spork we're pointing to the github branch.
-  gem 'guard-spork', :github => 'guard/guard-spork'
+  gem 'guard-spork', github: 'guard/guard-spork'
   gem 'spork', '1.0.0rc4'
 
 end
@@ -52,6 +52,7 @@ group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'shoulda', '3.5.0'
+  gem 'simplecov', '0.7.1', require: false
 end
 
 
