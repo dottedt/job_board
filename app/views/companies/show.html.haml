@@ -1,0 +1,19 @@
+%p#notice= notice
+%div
+  %h2 Name:
+  = @company.name
+%div
+  %h2 Url:
+  = link_to @company.name, @company.url
+%div
+  %h2 Address:
+  = @company.address
+%div
+  %h2 Show address:
+  = @company.show_address
+%div
+  %h2 Show as customer:
+  = @company.show_as_customer
+= link_to 'Edit', edit_company_path(@company)
+|
+\#{link_to 'Back', companies_path}
