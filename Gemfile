@@ -40,21 +40,23 @@ group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # Automatically run tests when files are changed
   gem 'guard-rspec', '4.0.1'
-  gem 'rb-readline', '~> 0.4.2'
+
   # To over come a known issue in guard-spork we're pointing to the github branch.
   gem 'guard-spork', github: 'guard/guard-spork'
   gem 'spork', '1.0.0rc4'
+  gem "factory_girl_rails", "~> 4.0"
 
 end
 
 
 group :test do
+  gem 'faker', '~> 1.2.0'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'shoulda', '3.5.0'
-  gem 'simplecov', '0.7.1', require: false
-end
 
+end
+gem 'simplecov', require: false, group: :test
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

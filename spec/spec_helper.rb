@@ -1,5 +1,10 @@
+require 'simplecov'
+SimpleCov.start
 require 'rubygems'
 require 'spork'
+require "capybara/rspec"
+
+
 
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
@@ -41,11 +46,13 @@ Spork.prefork do
     # order dependency and want to debug it, you can fix the order by providing
     # the seed, which is printed after each run.
     #     --seed 1234
+    config.include FactoryGirl::Syntax::Methods
     config.order = "random"
     config.include Capybara::DSL
     #Defer Gargage Collection for faster tests
     config.before(:all) { DeferredGarbageCollection.start }
     config.after(:all) { DeferredGarbageCollection.reconsider }
+
   end
 end
 

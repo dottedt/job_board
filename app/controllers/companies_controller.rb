@@ -27,10 +27,11 @@ class CompaniesController < ApplicationController
   def update
     # Slightly different because of the boolen values. Other wise .find(company_params)
     # would work.
+
     @company = Company.find(params[:id])
 
     if @company.update(company_params)
-      redirect_to @company
+      redirect_to @company, notice: 'The Company was successfully updated.'
     else
       render 'edit'
     end
@@ -38,8 +39,7 @@ class CompaniesController < ApplicationController
 
   def destroy
     @company.destroy
-
-    render 'index'
+    redirect_to companies_url
   end
 
   private
