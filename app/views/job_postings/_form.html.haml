@@ -1,0 +1,39 @@
+= form_for @job_posting do |f|
+  - if @job_posting.errors.any?
+    #errorExplanation
+      %h2
+        = pluralize(@job_posting.errors.count, "error")
+        prohibited this company from being saved:
+      %ul
+      - @job_posting.errors.full_messages.each do |msg|
+        %li= msg
+
+  %div
+    = f.label :experience
+    = f.text_field :experience
+  %div
+    = f.label :category
+    = f.text_field :category
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :relocation
+    = f.check_box :relocation
+  %div
+    = f.label :remote
+    = f.check_box :remote
+  %div
+    = f.label :freelance
+    = f.check_box :freelance
+  %div
+    = f.label :would_have_done
+    = f.text_field :would_have_done
+  %div
+    = f.label :compensation
+    = f.text_field :compensation
+  %div
+    = f.label :nice_to_have
+    = f.text_field :nice_to_have
+  %div
+    = f.submit

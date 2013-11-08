@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe CompaniesController do
-
   describe 'Get #index' do
     it 'lists the companies' do
       company = create(:company)

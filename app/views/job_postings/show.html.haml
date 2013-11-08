@@ -1,0 +1,32 @@
+%p#notice= notice
+%div
+  %h2 Experience:
+  = @job_posting.experience
+%div
+  %h2 Category:
+  = @job_posting.category
+%div
+  %h2 Title:
+  = @job_posting.title
+%div
+  %h2 Relocation:
+  = @job_posting.relocation
+%div
+  %h2 Remote Work
+  = @job_posting.remote
+%div
+  %h2 Freelance
+  = @job_posting.freelance
+%div
+  %h2 Would have done
+  = @job_posting.would_have_done
+%div
+  %h2 Compensation
+  = @job_posting.compensation
+%div
+  %h2 Nice to have
+  = @job_posting.nice_to_have
+
+= link_to 'Edit', edit_job_posting_path(@job_posting)
+|
+\#{link_to 'Back', job_postings_path}

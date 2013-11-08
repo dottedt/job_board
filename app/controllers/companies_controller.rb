@@ -25,7 +25,7 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    # Slightly different because of the boolen values. Other wise .find(company_params)
+    # Slightly different because of the boolen values and validation. Other wise .find(company_params)
     # would work.
 
     @company = Company.find(params[:id])
