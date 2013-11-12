@@ -16,3 +16,4 @@
 /tmp
 * Ignore spec coverage
 /coverage
+/.DS_Store
