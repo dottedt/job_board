@@ -1,0 +1,16 @@
+%h1 Job Experience
+%table
+  %tr
+    %th Experience
+    %th{colspan: "3"} Actions
+  - @job_experiences.each do |experience|
+    %tr
+      %td= experience.name
+      %td= link_to 'Show', experience
+      %td= link_to 'Edit', edit_job_experience_path(experience)
+      %td= link_to 'Destroy', experience, method: :delete, |
+           data: {confirm: 'Are you sure?' }       |
+
+%br/
+= link_to "New Job Experience", new_job_experience_path
+
