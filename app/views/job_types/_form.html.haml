@@ -1,0 +1,21 @@
+= form_for @job_type do |f|
+  - if @job_type.errors.any?
+    #errorExplanation
+      %h2
+        = pluralize(@job_type.errors.count, "error")
+        prohibited this experience from being saved:
+
+      %ul
+      - @job_type.errors.full_messages.each do |msg|
+        %li= msg
+
+  %div
+    = f.label :name
+    = f.text_field :name
+
+  %div
+    = f.label :skills
+    = f.text_field :skills
+
+  %div
+    = f.submit

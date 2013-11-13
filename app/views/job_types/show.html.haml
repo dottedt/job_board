@@ -1,0 +1,11 @@
+%p#notice= notice
+%div
+  %h2 Name:
+  = @job_type.name
+%div
+  %h2 Skills:
+  = @job_type.skills
+
+= link_to 'Edit', edit_job_type_path(@job_type)
+|
+\#{link_to 'Back', job_types_path}

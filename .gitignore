@@ -16,4 +16,8 @@
 /tmp
 * Ignore spec coverage
 /coverage
+* Ignore accidently touched DS_Store's
 /.DS_Store
+
+* Ignore Best Pratices output
+/rails_best_practices_output.html
