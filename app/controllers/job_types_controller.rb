@@ -35,7 +35,7 @@ class JobTypesController < ApplicationController
   end
 
   def destroy
-    @job_type.distroy
+    @job_type.destroy
     redirect_to job_types_url
   end
 
