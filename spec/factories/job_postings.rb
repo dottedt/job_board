@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :job_posting do
-    experience "1"
-    category "2"
+    job_experience_id "1"
+    job_type_id "2"
     title "MyText"
     relocation true
     remote true
@@ -11,7 +11,7 @@ FactoryGirl.define do
     nice_to_have "MyText"
 
     factory :invalid_job_posting do
-        experience nil
+        job_experience_id nil
 
     end
   end

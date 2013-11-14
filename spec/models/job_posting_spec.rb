@@ -4,11 +4,11 @@ describe JobPosting do
   it 'has a valid factory' do
     expect(build(:job_posting)).to be_valid
   end
-  it 'is invalid without experience' do
-    expect(build(:job_posting, experience: nil)).to have(1).errors_on(:experience)
+  it 'is invalid without job_experience_id' do
+    expect(build(:job_posting, job_experience_id: nil)).to have(1).errors_on(:job_experience_id)
   end
   it 'is invalid without category' do
-    expect(build(:job_posting, category: nil )).to have(1).errors_on(:category)
+    expect(build(:job_posting, job_type_id: nil )).to have(1).errors_on(:job_type_id)
   end
   it 'is invalid without title' do
     expect(build(:job_posting, title: nil)).to have(1).errors_on(:title)

@@ -45,7 +45,7 @@ class JobPostingsController < ApplicationController
     end
 
     def job_posting_params
-      params.require(:job_posting).permit(:experience, :category, :title, :relocation, :remote, :freelance, :would_have_done, :compensation, :nice_to_have)
+      params.require(:job_posting).permit(:job_experience_id, :job_type_id, :title, :relocation, :remote, :freelance, :would_have_done, :compensation, :nice_to_have)
     end
 
 end
