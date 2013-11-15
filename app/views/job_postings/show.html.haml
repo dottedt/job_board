@@ -1,10 +1,10 @@
 %p#notice= notice
 %div
   %h2 Experience:
-  = @job_posting.experience
+  = @job_posting.job_experience.name
 %div
   %h2 Category:
-  = @job_posting.category
+  = @job_posting.job_type.name
 %div
   %h2 Title:
   = @job_posting.title

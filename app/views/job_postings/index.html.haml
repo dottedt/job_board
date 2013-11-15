@@ -13,8 +13,8 @@
     %th{colspan: "3"} Actions
   - @job_postings.each do |posting|
     %tr
-      %td= posting.experience
-      %td= posting.category
+      %td= posting.job_experience.name
+      %td= posting.job_type.name
       %td= posting.title
       %td= posting.relocation
       %td= posting.remote

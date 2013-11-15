@@ -9,11 +9,11 @@
         %li= msg
 
   %div
-    = f.label :experience
-    = f.text_field :experience
+    = f.label :job_experience_id
+    = f.collection_select(:job_experience_id, JobExperience.all, :id, :name)
   %div
-    = f.label :category
-    = f.text_field :category
+    = f.label :job_type_id
+    = f.collection_select(:job_type_id, JobType.all, :id, :name)
   %div
     = f.label :title
     = f.text_field :title

@@ -1,4 +1,4 @@
 class JobType < ActiveRecord::Base
   validates :name, :skills, presence: true
-  belongs_to :job_posting
+  has_many :job_postings
 end

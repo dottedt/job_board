@@ -4,6 +4,6 @@ class JobPosting < ActiveRecord::Base
   validates :remote, inclusion: {in: [true, false], message: 'requires a true or false value'}
   validates :freelance, inclusion: {in: [true, false], message: 'requires a true or false value'}
 
-  has_many :job_experiences
-  has_many :job_types
+  belongs_to :job_experience
+  belongs_to :job_type
 end
