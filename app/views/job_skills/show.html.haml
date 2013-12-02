@@ -1,0 +1,11 @@
+%pnotice= notice
+%div
+  %h2 Skill:
+  = @job_skill.name
+%div
+  %h2 Version
+  = @job_skill.version
+
+= link_to 'Edit', edit_job_skill_path(@job_skill)
+|
+\#{link_to 'Back', job_skills_path}
