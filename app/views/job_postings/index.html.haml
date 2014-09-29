@@ -10,7 +10,8 @@
     %th Would have done
     %th Nice to have
     %th Compensation
-    %th{colspan: "3"} Actions
+    -if current_user
+      %th{colspan: "3"} Actions
   - @job_postings.each do |posting|
     %tr
       %td= posting.job_experience.name
@@ -22,9 +23,11 @@
       %td= posting.would_have_done
       %td= posting.nice_to_have
       %td= posting.compensation
-      %td= link_to 'Show', posting
-      %td= link_to 'Edit', edit_job_posting_path(posting)
-      %td= link_to 'Destroy', posting, method: :delete, |
-          data: { confirm: 'Are you sure?' }        |
-%br/
-= link_to 'New posting', new_job_posting_path
+      -if current_user
+        %td= link_to 'Show', posting
+        %td= link_to 'Edit', edit_job_posting_path(posting)
+        %td= link_to 'Destroy', posting, method: :delete, |
+            data: { confirm: 'Are you sure?' }        |
+-if current_user
+  %br/
+  = link_to 'New posting', new_job_posting_path

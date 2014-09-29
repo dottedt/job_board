@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: job-board_development
+  database: job_board_development
   pool: 5
   username: scotthughes
   password:
@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: job-board_test
+  database: job_board_test
   pool: 5
   username: scotthughes
   password:

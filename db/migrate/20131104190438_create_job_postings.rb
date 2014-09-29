@@ -1,9 +1,9 @@
 class CreateJobPostings < ActiveRecord::Migration
   def change
     create_table :job_postings do |t|
-      t.integer :experience
+      t.integer :job_experience_id
       t.integer :type
-      t.integer :category
+      t.integer :job_type_id
       t.text :title
       t.boolean :relocation
       t.boolean :remote

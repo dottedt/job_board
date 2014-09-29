@@ -1,12 +1,12 @@
-= form_for @job_type do |f|
-  - if @job_type.errors.any?
+= form_for job_type do |f|
+  - if job_type.errors.any?
     #errorExplanation
       %h2
-        = pluralize(@job_type.errors.count, "error")
+        = pluralize(job_type.errors.count, "error")
         prohibited this experience from being saved:
 
       %ul
-      - @job_type.errors.full_messages.each do |msg|
+      - job_type.errors.full_messages.each do |msg|
         %li= msg
 
   %div

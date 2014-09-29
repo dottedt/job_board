@@ -1,8 +1,9 @@
 class JobPostingsController < ApplicationController
   before_action :set_job_posting, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @job_postings = JobPosting.all
+    @job_postings = JobPosting.includes(:job_experience, :job_type)
   end
 
   def show
@@ -40,12 +41,12 @@ class JobPostingsController < ApplicationController
   end
 
   private
-    def set_job_posting
-      @job_posting = JobPosting.find(params[:id])
-    end
+  def set_job_posting
+    @job_posting = JobPosting.find(params[:id])
+  end
 
-    def job_posting_params
-      params.require(:job_posting).permit(:job_experience_id, :job_type_id, :title, :relocation, :remote, :freelance, :would_have_done, :compensation, :nice_to_have)
-    end
+  def job_posting_params
+    params.require(:job_posting).permit(:job_experience_id, :job_type_id, :title, :relocation, :remote, :freelance, :would_have_done, :compensation, :nice_to_have)
+  end
 
 end

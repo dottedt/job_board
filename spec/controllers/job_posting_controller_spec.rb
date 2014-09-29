@@ -1,6 +1,8 @@
 require 'spec_helper'
 
+
 describe JobPostingsController do
+  login_user
   describe 'Get #index' do
     it 'lists the job posting' do
       posting = create(:job_posting)
@@ -24,6 +26,8 @@ describe JobPostingsController do
     end
   end
   describe 'Get #new' do
+
+
     it 'asssigns a new Job Posting to @job_posting' do
       get :new
       expect(assigns(:job_posting)).to be_a_new(JobPosting)
@@ -58,6 +62,7 @@ describe JobPostingsController do
     end
   end
   describe 'Patch #update' do
+
     before :each do
       @job_posting = create(:job_posting)
     end

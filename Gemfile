@@ -27,8 +27,11 @@ gem 'turbolinks', '1.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-#Beautiful, DRY, well-indented, clear markup
+# Beautiful, DRY, well-indented, clear markup
 gem "haml", "~> 4.0.3"
+
+# Flexible authentication solution for Rails based on Warden
+gem 'devise', '3.2.4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -45,10 +48,11 @@ group :development, :test do
   gem 'guard-spork', github: 'guard/guard-spork'
   gem 'spork', '1.0.0rc4'
   gem "factory_girl_rails", "~> 4.0"
+end
 
-
-
-
+group :development do
+  gem "bullet"
+  gem "rack-mini-profiler", "0.9.1"
 end
 
 
@@ -65,7 +69,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem "unicorn-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

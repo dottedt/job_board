@@ -1,4 +1,6 @@
 FactoryGirl.define do
+
+
   factory :job_posting do
     job_experience_id "1"
     job_type_id "2"

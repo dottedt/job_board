@@ -6,4 +6,7 @@ class JobPosting < ActiveRecord::Base
 
   belongs_to :job_experience
   belongs_to :job_type
+
+  delegate :name, to: :job_experience, prefix: true
+  delegate :name, to: :job_type, prefix: true
 end
